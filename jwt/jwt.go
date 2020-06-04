@@ -8,7 +8,7 @@ import (
 	"github.com/tikimcrzx/tikimcrzx/models"
 )
 
-/*GeneroJWT*/
+/*GeneroJWT genera jwt con datos necesarios*/
 func GeneroJWT(t models.Usuario) (string, error) {
 	secret := os.Getenv("jwt_secret")
 	if secret == "" {

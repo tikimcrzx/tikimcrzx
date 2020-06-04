@@ -10,6 +10,7 @@ import (
 	"github.com/tikimcrzx/tikimcrzx/models"
 )
 
+/*Login Ruta de acceso*/
 func Login(w http.ResponseWriter, r *http.Request) {
 	w.Header().Add("content-type", "application/json")
 
