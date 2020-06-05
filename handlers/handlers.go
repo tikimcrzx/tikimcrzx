@@ -28,7 +28,8 @@ func Manejadores() {
 	router.HandleFunc("/subirBanner", middlewares.ChequeoDB(middlewares.ValidoJWT(routes.SubirBanner))).Methods("POST")
 	router.HandleFunc("/obtenrBanner", middlewares.ChequeoDB(routes.ObtenerBanner)).Methods("GET")
 
-	router.HandleFunc("/altaRelacion", middlewares.ChequeoDB(middlewares.ValidoJWT(routes.AltaRelacion))).Methods("Post")
+	router.HandleFunc("/altaRelacion", middlewares.ChequeoDB(middlewares.ValidoJWT(routes.AltaRelacion))).Methods("POST")
+	router.HandleFunc("/bajaRelacion", middlewares.ChequeoDB(middlewares.ValidoJWT(routes.BajaRelacion))).Methods("DELETE")
 
 	PORT := os.Getenv("PORT")
 	if PORT == "" {
