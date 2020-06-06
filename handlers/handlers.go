@@ -32,6 +32,7 @@ func Manejadores() {
 	router.HandleFunc("/bajaRelacion", middlewares.ChequeoDB(middlewares.ValidoJWT(routes.BajaRelacion))).Methods("DELETE")
 	router.HandleFunc("/consultaRelacion", middlewares.ChequeoDB(middlewares.ValidoJWT(routes.ConsultaRelacion))).Methods("GET")
 	router.HandleFunc("/listaUsuarios", middlewares.ChequeoDB(middlewares.ValidoJWT(routes.ListaUsuarios))).Methods("GET")
+	router.HandleFunc("/leoTweetsSeguidores", middlewares.ChequeoDB(middlewares.ValidoJWT(routes.LeoTweetsSeguidores))).Methods("GET")
 
 	PORT := os.Getenv("PORT")
 	if PORT == "" {
